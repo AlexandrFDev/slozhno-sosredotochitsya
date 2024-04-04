@@ -215,6 +215,10 @@
     gap: 20px;
 }
 
+.title-list {
+    margin: 0;
+}
+
 .description-decor {
     font-family: var(--main-font, IBM Plex mono, sans-serif);
     color: var(--content-text);
