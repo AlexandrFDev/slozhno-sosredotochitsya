@@ -109,9 +109,10 @@
     font-family: var(--main-font, 'IBM Plex mono', sans-serif);
     color: var(--text-decoration-accent-color, #FF0070);
     font-size: 18px;
-    padding: 1.5px 13px;
     cursor: pointer;
     line-height: 18px;
+    padding: 7px 13px;
+    inline-size: 70px;
 }
 
 .header__theme-menu-button:hover {
