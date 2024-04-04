@@ -104,6 +104,7 @@
     font-size: 18px;
     padding: 1.5px 13px;
     cursor: pointer;
+    line-height: 18px;
 }
 
 .header__theme-menu-button:hover {
@@ -117,7 +118,7 @@
 
 .header__title {
     font-size: var(--font-size-title-header, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
-    line-height: 0.8em;
+    line-height: 95.7px;
     font-family: var(--main-font, sans-serf);
     align-self: center;
     color: var(--header-title-color);
@@ -126,15 +127,20 @@
 
 @media (width >= 768px) {
     .header__title {
+        line-height: 99px;
         --font-size-title-header: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 }
 
+@media (width >= 1024px) {
+    line-height: 129.53px;
+}
 .header__description {
     background-color: var(--accent-color, #FF0070);
     align-self: center;
     inline-size: clamp(355px, 100%, 491px);
     justify-self: center;
+    line-height: var(--line-height-content, 23.4px);
 }
 
 @media (width >= 530px) {
@@ -187,6 +193,7 @@
     font-family: var(--main-font, IBM Plex mono, sans-serif);
     font-weight: bold;
     font-size: 18px;
+    line-height: var(--line-height-content, 23.4px);
     color: var(--text-decoration-accent-color);
 }
 
@@ -199,6 +206,7 @@
     font-size: 18px;
     margin-block-end: 10px;
     font-weight: bold;
+    line-height: var(--line-height-content, 23.4px);
 }
 
 .list-decor {
@@ -211,6 +219,7 @@
     font-family: var(--main-font, IBM Plex mono, sans-serif);
     color: var(--content-text);
     font-size: 18px;
+    line-height: var(--line-height-content, 23.4px);
 }
 
 .description-decor__link {

@@ -13,5 +13,6 @@
     --cover-image: url("../images/cover-image-dark.png");
     --header-title-color-box-shadow: #FF0070;
     --content-text: #F1B2CE;
+    --line-height-content: 23.4px;
     --hover-menu-rhem-button-color-outline: rgba(255, 0, 112, 0.4);
 }
