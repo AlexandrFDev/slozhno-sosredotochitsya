@@ -19,6 +19,7 @@
     display: grid;
     grid-template-rows: repeat(auto-fit, calc((100vh / 3) - 10px));
     block-size: 100vh;
+    padding-block-end: var(--padding-page, 10px);
 }
 
 .camera::before {
