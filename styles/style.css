@@ -140,7 +140,9 @@
 }
 
 @media (width >= 1024px) {
-    line-height: 129.53px;
+    .header__title {
+        line-height: 129.53px;
+    }
 }
 .header__description {
     background-color: var(--accent-color, #FF0070);
