@@ -40,3 +40,17 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  border-block-end: 1px solid var(--text-decoration-accent-color);
+}
+
+a:focus-visible {
+  outline: 1px solid var(--content-text);
+  outline-offset: 2px;
+}
