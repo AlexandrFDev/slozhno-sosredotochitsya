@@ -4,19 +4,29 @@
   переключая тему
 */
 :root.theme-dark {
-    --main-font: IBM Plex mono;
+
+}
+
+.page.theme_dark {
     --text-decoration-accent-color: #FF0070;
     --accent-color: #FF0070;
     --content-title-color: #000028;
     --header-title-color: #DB00FF;
-    --font-size-title-header: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    --padding-page: 10px;
     --cover-image: url("../images/cover-image-dark.png");
     --header-title-color-box-shadow: #FF0070;
     --content-text: #F1B2CE;
     --hover-menu-rhem-button-color-outline: rgba(255, 0, 112, 0.4);
 }
 
-.page.theme_dark {
-    background-image: var(--cover-image);
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-decoration-accent-color: #FF0070;
+        --accent-color: #FF0070;
+        --content-title-color: #000028;
+        --header-title-color: #DB00FF;
+        --cover-image: url("../images/cover-image-dark.png");
+        --header-title-color-box-shadow: #FF0070;
+        --content-text: #F1B2CE;
+        --hover-menu-rhem-button-color-outline: rgba(255, 0, 112, 0.4);
+    }
 }
