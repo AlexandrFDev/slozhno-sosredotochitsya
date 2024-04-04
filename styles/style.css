@@ -22,6 +22,12 @@
     padding-block-end: var(--padding-page, 10px);
 }
 
+@media (width >= 768px) {
+    .header {
+        padding-inline-start: 0;
+    }
+}
+
 .camera::before {
     content: '';
     display: block;
