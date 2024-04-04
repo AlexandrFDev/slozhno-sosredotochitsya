@@ -25,4 +25,7 @@
         --content-text: #353430;
         --hover-menu-rhem-button-color-outline: #32312D66;
     }
+    .decoration-rec {
+        display: none;
+    }
 }
