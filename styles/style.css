@@ -129,7 +129,6 @@
     font-family: var(--main-font, sans-serf);
     align-self: center;
     color: var(--header-title-color);
-    block-size: var(--font-size-title-header, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
     text-shadow: 4px 4px 0 var(--header-title-color-box-shadow);
 }
 
