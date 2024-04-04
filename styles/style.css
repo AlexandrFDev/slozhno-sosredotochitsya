@@ -1,7 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.section-content {
+    padding: var(--padding-page, 10px);
+}
 
 .page {
-    padding: var(--padding-page, 10px);
     background-image: var(--cover-image, url("../images/cover-image-dark.png"));
     background-size: cover;
     background-position: bottom;
@@ -10,10 +12,11 @@
 }
 
 .header {
+    inline-size: 100%;
     position: relative;
     display: grid;
     grid-template-rows: repeat(auto-fit, calc((100vh / 3) - 10px));
-    block-size: calc(100vh - var(--padding-page, 10px) * 2);
+    block-size: 100vh;
 }
 
 .camera::before {
@@ -24,8 +27,8 @@
     block-size: 25px;
     border-inline-end: 1px solid var(--text-decoration-accent-color, #FF0070);
     border-block-start: 1px solid var(--text-decoration-accent-color, #FF0070);
-    inset-inline-end: 0;
-    inset-block-start: 0;
+    inset-inline-end: var(--padding-page);
+    inset-block-start: var(--padding-page);
 }
 
 .camera::after {
@@ -36,13 +39,13 @@
     block-size: 25px;
     border-inline-start: 1px solid var(--text-decoration-accent-color, #FF0070);
     border-block-end: 1px solid var(--text-decoration-accent-color, #FF0070);
-    inset-inline-start: 0;
-    inset-block-end: 0;
+    inset-inline-start: var(--padding-page);
+    inset-block-end: var(--padding-page);
 }
 
 .decoration-rec {
-    inset-inline-end: 9px;
-    inset-block-start: 1px;
+    inset-inline-end: calc(var(--padding-page) + 9px);
+    inset-block-start: calc(var(--padding-page) + 1px);
     position: absolute;
     display: flex;
     gap: 10px;
@@ -160,7 +163,7 @@
 @media (width >= 768px) {
     .section-decor-column {
         grid-template-rows: inherit;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 2fr;
     }
 }
 
@@ -183,8 +186,8 @@
 }
 
 .list-decor {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: minmax(min-content,max-content);
     gap: 20px;
 }
 
@@ -210,10 +213,20 @@
     font-weight: normal;
 }
 
+.section-decor {
+    grid-template-rows: minmax(min-content, max-content);
+}
+
 @media (width >= 1024px) {
     .section-decor {
         grid-template-rows: minmax(min-content, max-content);
-        grid-template-columns: inherit;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .section-decor .list-decor {
+        grid-row: 2;
+        grid-column: 1/4;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .section-decor__list-decor {
@@ -263,11 +276,16 @@
     justify-content: center;
     align-items: center;
     inline-size: 100%;
-    block-size: calc(100vh - var(--padding-page, 10px) * 2);
+    block-size: 100vh;
+}
+
+@media (width >= 768px) {
+    .footer_title {
+        --font-size-title-header: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
 }
 
 .footer_title {
-
     color: var(--header-title-color);
     text-shadow: 2px 2px 0 var(--header-title-color-box-shadow);
     font-size: var(--font-size-title-header, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
