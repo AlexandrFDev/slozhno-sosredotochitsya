@@ -3,9 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
-
-}
 
 .page.theme_dark {
     --text-decoration-accent-color: #FF0070;
@@ -18,15 +15,4 @@
     --hover-menu-rhem-button-color-outline: rgba(255, 0, 112, 0.4);
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-decoration-accent-color: #FF0070;
-        --accent-color: #FF0070;
-        --content-title-color: #000028;
-        --header-title-color: #DB00FF;
-        --cover-image: url("../images/cover-image-dark.png");
-        --header-title-color-box-shadow: #FF0070;
-        --content-text: #F1B2CE;
-        --hover-menu-rhem-button-color-outline: rgba(255, 0, 112, 0.4);
-    }
-}
+
